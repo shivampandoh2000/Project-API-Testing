@@ -2,6 +2,8 @@ package Apitesting.testproject;
 
 import static io.restassured.RestAssured.given;
 
+import java.util.HashMap;
+
 import org.hamcrest.core.IsEqual;
 import org.json.simple.JSONObject;
 import org.testng.annotations.BeforeClass;
@@ -42,6 +44,34 @@ ResponseSpecification res;
 	}
 	
 	
+	@Test(description="Generating auth token",testName="testCreateToken")
+	public void testCreateToken() {
+		ExtentReportManager.test = ExtentReportManager.getTest();
+		ExtentReportManager.test.log(LogStatus.INFO, "Specifying the base URI","https://restful-booker.herokuapp.com");
+		ExtentReportManager.test.log(LogStatus.INFO, "API call","GET");
+		ExtentReportManager.test.log(LogStatus.INFO, "Resource route","/auth");
+		ExtentReportManager.test.log(LogStatus.INFO, "Value compared","StatusCode");
+		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+		HashMap<String,String> params = new HashMap<>();
+		params.put("username", "admin123");
+		params.put("password", "password123");
+		given().when().contentType("application/json").body(params).post("/auth").then().spec(res);
+		
+	}
+	
+	@Test(description="Getting the list of booking ids",testName="testgetbookingid")
+	public void testgetbookingid() {
+		ExtentReportManager.test = ExtentReportManager.getTest();
+		ExtentReportManager.test.log(LogStatus.INFO, "Specifying the base URI","https://restful-booker.herokuapp.com");
+		ExtentReportManager.test.log(LogStatus.INFO, "API call","GET");
+		ExtentReportManager.test.log(LogStatus.INFO, "Resource route","/booking");
+		ExtentReportManager.test.log(LogStatus.INFO, "Value compared","bookingid");
+		RestAssured.baseURI = "https://restful-booker.herokuapp.com";
+		given().when().get("/booking").then().assertThat().body("[0].bookingid", IsEqual.equalTo(605));
+		
+	}
+	
+	
 	
 	@Test(description="Fetches the booking details using id", testName="getBookingId")
 	public void getBookingId() {
@@ -51,7 +81,7 @@ ResponseSpecification res;
 		ExtentReportManager.test.log(LogStatus.INFO, "Resource url", "booking/1089");
 		ExtentReportManager.test.log(LogStatus.INFO, "Field Comparison", "firstname");
 		RestAssured.baseURI = "https://restful-booker.herokuapp.com/";
-		given().when().get("booking/1089").then().spec(res).assertThat().body("firstname", IsEqual.equalTo("Jim"));
+		given().when().get("booking/399").then().spec(res).assertThat().body("firstname", IsEqual.equalTo("Austin"));
 	}
 	
 	

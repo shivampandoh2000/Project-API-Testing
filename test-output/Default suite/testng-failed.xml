@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Apitesting.testproject.TestCases">
+        <methods>
+          <include name="testgetbookingid"/>
+          <include name="getBookingId"/>
+          <include name="healthCheck"/>
+          <include name="setSpecification"/>
+          <include name="createBooking"/>
+          <include name="testCreateToken"/>
+        </methods>
+      </class> <!-- Apitesting.testproject.TestCases -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

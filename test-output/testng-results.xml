@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-27T12:39:33Z" name="Test Suite" finished-at="2022-05-27T12:39:39Z" duration-ms="6208">
+  <suite started-at="2022-05-31T08:38:43Z" name="Test Suite" finished-at="2022-05-31T08:38:55Z" duration-ms="12004">
     <groups>
     </groups>
-    <test started-at="2022-05-27T12:39:33Z" name="Demo Api Tests" finished-at="2022-05-27T12:39:39Z" duration-ms="6208">
+    <test started-at="2022-05-31T08:38:43Z" name="Demo Api Tests" finished-at="2022-05-31T08:38:55Z" duration-ms="12004">
       <class name="Apitesting.testproject.TestCases">
-        <test-method is-config="true" signature="setSpecification()[pri:0, instance:Apitesting.testproject.TestCases@45b4c3a9]" started-at="2022-05-27T12:39:33Z" name="setSpecification" finished-at="2022-05-27T12:39:34Z" duration-ms="636" status="PASS">
+        <test-method is-config="true" signature="setSpecification()[pri:0, instance:Apitesting.testproject.TestCases@291caca8]" started-at="2022-05-31T08:38:43Z" name="setSpecification" finished-at="2022-05-31T08:38:45Z" duration-ms="1759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setSpecification -->
-        <test-method signature="createBooking()[pri:0, instance:Apitesting.testproject.TestCases@45b4c3a9]" started-at="2022-05-27T12:39:34Z" name="createBooking" description="Creates booking details" finished-at="2022-05-27T12:39:36Z" duration-ms="2623" status="PASS">
+        <test-method signature="createBooking()[pri:0, instance:Apitesting.testproject.TestCases@291caca8]" started-at="2022-05-31T08:38:45Z" name="createBooking" description="Creates booking details" finished-at="2022-05-31T08:38:49Z" duration-ms="4026" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createBooking -->
-        <test-method signature="getBookingId()[pri:0, instance:Apitesting.testproject.TestCases@45b4c3a9]" started-at="2022-05-27T12:39:36Z" name="getBookingId" description="Fetches the booking details using id" finished-at="2022-05-27T12:39:38Z" duration-ms="1509" status="PASS">
+        <test-method signature="getBookingId()[pri:0, instance:Apitesting.testproject.TestCases@291caca8]" started-at="2022-05-31T08:38:49Z" name="getBookingId" description="Fetches the booking details using id" finished-at="2022-05-31T08:38:50Z" duration-ms="1512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBookingId -->
-        <test-method signature="healthCheck()[pri:0, instance:Apitesting.testproject.TestCases@45b4c3a9]" started-at="2022-05-27T12:39:38Z" name="healthCheck" description="Health Checkup (ping server)" finished-at="2022-05-27T12:39:39Z" duration-ms="1424" status="PASS">
+        <test-method signature="healthCheck()[pri:0, instance:Apitesting.testproject.TestCases@291caca8]" started-at="2022-05-31T08:38:50Z" name="healthCheck" description="Health Checkup (ping server)" finished-at="2022-05-31T08:38:52Z" duration-ms="1493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- healthCheck -->
+        <test-method signature="testCreateToken()[pri:0, instance:Apitesting.testproject.TestCases@291caca8]" started-at="2022-05-31T08:38:52Z" name="testCreateToken" description="Generating auth token" finished-at="2022-05-31T08:38:53Z" duration-ms="1569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateToken -->
+        <test-method signature="testgetbookingid()[pri:0, instance:Apitesting.testproject.TestCases@291caca8]" started-at="2022-05-31T08:38:53Z" name="testgetbookingid" description="Getting the list of booking ids" finished-at="2022-05-31T08:38:55Z" duration-ms="1606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testgetbookingid -->
       </class> <!-- Apitesting.testproject.TestCases -->
     </test> <!-- Demo Api Tests -->
   </suite> <!-- Test Suite -->
